@@ -1,0 +1,10 @@
+@OESC.FraudManagement_HostAddress = http://localhost:5041
+
+GET {{OESC.FraudManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{OESC.FraudManagement_HostAddress}}/health
+
+###
