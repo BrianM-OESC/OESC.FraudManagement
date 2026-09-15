@@ -70,14 +70,14 @@ a {
 }
 
 .nav-link-custom {
-    color: #424b57 !important;
+    color: var(--primary) !important;
     font-size: 14px;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
     .nav-link-custom:hover {
-        color: var(--primary) !important;
+        color: #424b57 !important;
     }
 
 .nav-action,
@@ -362,6 +362,7 @@ a {
 /* Footer */
 .app-footer {
     margin-top: auto;
+/*    background: var(--light);*/
     background: var(--dark);
     color: #b8c0ca;
     padding: 30px 0;

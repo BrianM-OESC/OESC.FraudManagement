@@ -83,7 +83,7 @@ function HomePage() {
                 <section className="hero-section">
                     <Container>
                         <Row className="align-items-center g-5">
-                            <Col lg={7}>
+                            <Col lg={7} className="d-flex flex-column align-items-center text-center">
                                 <h1 className="hero-title">
                                     OESC Fraud
                                     <br />
@@ -102,10 +102,7 @@ function HomePage() {
                                     >
                                         Explore fraud options <ArrowRight size={18} />
                                     </Button>
-                                    <span className="hero-note">
-                                        <ShieldCheck size={18} />
-                                        Secure operations workspace
-                                    </span>
+                                    
                                 </div>
                             </Col>
 
@@ -132,7 +129,7 @@ function HomePage() {
 
                 <section className="options-section" id="fraud-options">
                     <Container>
-                        <div className="section-heading">
+                        <div className="section-heading justify-content-center">
                             <div>
                                 <span className="section-eyebrow">WORKSPACE</span>
                                 <h2>Choose an option</h2>
@@ -140,9 +137,9 @@ function HomePage() {
                             </div>
                         </div>
 
-                        <Row className="g-4">
+                        <Row className="g-4 justify-content-center">
                             {fraudOptions.map((option, index) => (
-                                <Col key={option.path} md={6} xl={3}>
+                                <Col key={option.path} md={12} xl={3}>
                                     <Card
                                         as={Link}
                                         to={option.path}
