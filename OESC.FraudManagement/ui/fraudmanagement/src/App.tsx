@@ -11,10 +11,8 @@ import {
 } from "react-bootstrap";
 import {
     ArrowRight,
+    ArrowDown,
     ClipboardCheck,
-    FileSearch,
-    LayoutDashboard,
-    ShieldCheck,
 } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -100,9 +98,9 @@ function HomePage() {
                                         href="#fraud-options"
                                         className="primary-button"
                                     >
-                                        Explore fraud options <ArrowRight size={18} />
+                                        Explore fraud options <ArrowDown size={18} />
                                     </Button>
-                                    
+
                                 </div>
                             </Col>
 
@@ -129,7 +127,7 @@ function HomePage() {
 
                 <section className="options-section" id="fraud-options">
                     <Container>
-                        <div className="section-heading justify-content-center">
+                        <div className="section-heading">
                             <div>
                                 <span className="section-eyebrow">WORKSPACE</span>
                                 <h2>Choose an option</h2>
@@ -139,7 +137,7 @@ function HomePage() {
 
                         <Row className="g-4 justify-content-center">
                             {fraudOptions.map((option, index) => (
-                                <Col key={option.path} md={12} xl={3}>
+                                <Col key={option.path} xs={10} sm={7} md={6} xl={4}>
                                     <Card
                                         as={Link}
                                         to={option.path}
