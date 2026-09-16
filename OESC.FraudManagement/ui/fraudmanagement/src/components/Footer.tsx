@@ -3,6 +3,7 @@ import {
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../assets/logo";
+import ApiHealthStatus from "./ApiHealthStatus";
 
 export default function Footer() {
     return (
@@ -12,6 +13,7 @@ export default function Footer() {
                     <div className="footer-brand">
                         <Logo />
                     </div>
+                    <ApiHealthStatus />
                     <div className="footer-right">
                         <span>Oklahoma Employment Security Commission</span>
                         <span>© {new Date().getFullYear()} OESC</span>

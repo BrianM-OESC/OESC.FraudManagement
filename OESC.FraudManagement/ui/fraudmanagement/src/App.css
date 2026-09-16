@@ -418,7 +418,7 @@ a {
     color: var(--primary);
     font-size: 13px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .inner-page h1 {
@@ -516,4 +516,148 @@ a {
     width: 250px;
     height: 46px;
     object-fit: contain;
+}
+
+
+/* Disassociate SSN form */
+
+.inner-page {
+    background-color: #f7f7f7;
+    color: #0d0d0d;
+    min-height: 70vh;
+    padding: 2rem 0 4rem;
+}
+
+.inner-page-header {
+    margin: 0.5rem 0 1rem;
+}
+
+.inner-page-header h1 {
+    color: #004e9a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.inner-page-description {
+    color: #555;
+    margin-bottom: 0;
+}
+
+.back-link {
+    color: #004e9a;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.fraud-form-card {
+    background-color: #fff;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(13, 13, 13, 0.06);
+}
+
+.fraud-form-card .card-body {
+    padding: 2rem;
+}
+
+.form-section-heading {
+    border-bottom: 1px solid #e1e5e9;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+
+.form-section-heading h2,
+.batch-heading {
+    color: #0d0d0d;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.form-section-heading p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.required-mark {
+    color: #b42318;
+    font-weight: 700;
+}
+
+.form-label {
+    color: #0d0d0d;
+    font-weight: 500;
+}
+
+.form-control {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    min-height: 42px;
+}
+
+.form-control:focus {
+    border-color: #004e9a;
+    box-shadow: 0 0 0 0.2rem rgba(0, 78, 154, 0.15);
+}
+
+.btn-primary-custom {
+    background-color: #004e9a;
+    border-color: #004e9a;
+    font-weight: 500;
+}
+
+.btn-primary-custom:hover,
+.btn-primary-custom:focus {
+    background-color: #003b75;
+    border-color: #003b75;
+}
+
+.fraud-records-table th {
+    background-color: #004e9a;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.fraud-records-table td {
+    vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+    .fraud-form-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .inner-page-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* API Health Status */
+.api-health-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.health-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.health-dot.healthy {
+    background-color: #198754;
+}
+
+.health-dot.unhealthy {
+    background-color: #dc3545;
 }
