@@ -2,26 +2,15 @@
 import { Link } from "react-router-dom";
 import {
     Container,
-    Navbar,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from "../../../assets/logo";
+import NavbarComponent from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
 
 export default function DisassociateSsnPage({ title }: { title: string }) {
     return (
         <div className="app-shell">
-            <Navbar className="app-navbar">
-                <Container>
-                    <Navbar.Brand as={Link} to="/" className="brand">
-                        <Logo />
-                        <div>
-                            <div className="brand-name">OESC</div>
-                            <div className="brand-subtitle">Fraud Management</div>
-                        </div>
-                    </Navbar.Brand>
-                </Container>
-            </Navbar>
-
+            <NavbarComponent />
             <main className="inner-page">
                 <Container>
                     <Link to="/" className="back-link">
@@ -34,15 +23,7 @@ export default function DisassociateSsnPage({ title }: { title: string }) {
                     </p>
                 </Container>
             </main>
-
-            <footer className="app-footer">
-                <Container>
-                    <div className="footer-content">
-                        <span>OESC Fraud Management</span>
-                        <span>© {new Date().getFullYear()} OESC</span>
-                    </div>
-                </Container>
-            </footer>
+            <Footer />
         </div>
     );
 }

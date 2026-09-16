@@ -38,7 +38,7 @@ a {
 .app-navbar {
     background: rgba(247, 247, 247, 0.96);
     border-bottom: 1px solid var(--border);
-    padding: 18px 0;
+    padding: 7px 0;
 }
 
 .brand {
@@ -364,7 +364,7 @@ a {
     /*    background: var(--light);*/
     background: var(--dark);
     color: #b8c0ca;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .footer-content {
@@ -410,7 +410,7 @@ a {
 /* Inner pages */
 .inner-page {
     flex: 1;
-    padding: 75px 0;
+    padding: 50px 0;
 }
 
 .back-link {

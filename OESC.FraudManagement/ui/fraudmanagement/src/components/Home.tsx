@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
     Button,
     Card,
     Col,
     Container,
-    Nav,
-    Navbar,
     Row,
 } from "react-bootstrap";
 import {
@@ -14,7 +12,10 @@ import {
     ClipboardCheck,
 } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from "../assets/logo";
+import NavbarComponent from "./Navbar";
+import Footer from "../components/Footer";
+import Icon from "../assets/icon";
+import { useEffect } from "react";
 
 const fraudOptions = [
     {
@@ -27,43 +28,25 @@ const fraudOptions = [
     },
 ];
 
-function Icon() {
-    return (
-        <div className="oesc-icon">
-            <img
-                src="/oesc-icon.svg"
-                alt="OESC icon"
-            />
-        </div>
-    )
-}
+export default function Home() {
+    const location = useLocation();
 
-export default function HomePage() {
+    useEffect(() => {
+        if (location.hash === "#fraud-options") {
+            const element = document.getElementById("fraud-options");
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        }
+    }, [location]);
+
     return (
         <div className="app-shell">
-            <Navbar expand="lg" className="app-navbar" collapseOnSelect>
-                <Container>
-                    <Navbar.Brand as={Link} to="/" className="brand">
-                        <Logo />
-                    </Navbar.Brand>
-
-                    <Navbar.Toggle aria-controls="main-navbar" />
-                    <Navbar.Collapse id="main-navbar">
-                        <Nav className="ms-auto align-items-lg-center gap-lg-3">
-                            <Nav.Link as={Link} to="/" className="nav-link-custom">
-                                Home
-                            </Nav.Link>
-                            <Nav.Link href="#fraud-options" className="nav-link-custom">
-                                Fraud Options
-                            </Nav.Link>
-                            <Nav.Link href="https://cdlt.oesc.ok.gov/" className="nav-link-custom">
-                                Agency Service Tools
-                            </Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-
+            <NavbarComponent />
             <main>
                 <section className="hero-section">
                     <Container>
@@ -154,19 +137,7 @@ export default function HomePage() {
                 </section>
             </main>
 
-            <footer className="app-footer">
-                <Container>
-                    <div className="footer-content">
-                        <div className="footer-brand">
-                            <Logo />
-                        </div>
-                        <div className="footer-right">
-                            <span>Oklahoma Employment Security Commission</span>
-                            <span>© {new Date().getFullYear()} OESC</span>
-                        </div>
-                    </div>
-                </Container>
-            </footer>
+            <Footer />
         </div>
     );
 }
